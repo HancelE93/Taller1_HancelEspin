@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 1079254395}
   - component: {fileID: 1079254394}
   - component: {fileID: 1079254397}
+  - component: {fileID: 1079254398}
   m_Layer: 0
   m_Name: personake
   m_TagString: Untagged
@@ -234,7 +235,7 @@ Transform:
   m_GameObject: {fileID: 1079254393}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.003, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0.09, y: 1.663, z: 0}
   m_LocalScale: {x: 1.6435, y: 1.41341, z: 1.6435}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -286,6 +287,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.3130303, y: 0.41203344}
   m_EdgeRadius: 0
+--- !u!114 &1079254398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079254393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dfa8ae6c874f0c4e8873d369b27ff78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  moveSpeed: 5
+  jumpForce: 7
 --- !u!1 &1522996145
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,7 +314,7 @@ GameObject:
   - component: {fileID: 1522996146}
   m_Layer: 0
   m_Name: plataform
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
