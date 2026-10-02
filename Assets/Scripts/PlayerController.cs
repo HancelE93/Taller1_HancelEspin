@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     private bool facinRight = true;
 
+    private float move;
+
     void Start()
     {
         rd = GetComponent<Rigidbody2D>();
@@ -19,10 +21,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        float move = Input.GetAxis("Horizontal");
-
-        // Movimiento
-        rd.linearVelocity = new Vector2(move * moveSpeed, rd.linearVelocity.y);
+        // Leer movimiento del teclado
+        move = Input.GetAxis("Horizontal");
 
         // Girar personaje
         if (move > 0 && !facinRight)
@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("speed", speedAnimation);
 
         // Saltar
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rd.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 
@@ -47,6 +47,15 @@ public class PlayerController : MonoBehaviour
 
             animator.SetBool("isJump", true);
         }
+    }
+
+    void FixedUpdate()
+    {
+        // Aplicar movimiento físico
+        rd.linearVelocity = new Vector2(
+            move * moveSpeed,
+            rd.linearVelocity.y
+        );
     }
 
     void OnCollisionEnter2D(Collision2D collision)
