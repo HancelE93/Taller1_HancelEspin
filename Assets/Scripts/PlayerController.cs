@@ -1,26 +1,42 @@
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
-{  
+{
     private Rigidbody2D rd;
+    private Animator animator;
 
     public float moveSpeed = 5f;
     public float jumpForce = 7f;
 
     private bool isGrounded;
+    private bool facinRight = true;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rd = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         float move = Input.GetAxis("Horizontal");
 
-        rd.velocity = new Vector2(move * moveSpeed, rd.velocity.y);
+        // Movimiento
+        rd.linearVelocity = new Vector2(move * moveSpeed, rd.linearVelocity.y);
+
+        // Girar personaje
+        if (move > 0 && !facinRight)
+        {
+            Flip();
+        }
+        else if (move < 0 && facinRight)
+        {
+            Flip();
+        }
+
+        // Animación de correr
+        float speedAnimation = Mathf.Abs(move);
+        animator.SetFloat("speed", speedAnimation);
 
         // Saltar
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
@@ -28,6 +44,8 @@ public class PlayerController : MonoBehaviour
             rd.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 
             isGrounded = false;
+
+            animator.SetBool("isJump", true);
         }
     }
 
@@ -36,15 +54,26 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+
+            animator.SetBool("isJump", false);
         }
     }
 
-        // Cuando deja de tocar el suelo
     void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = false;
         }
+    }
+
+    void Flip()
+    {
+        facinRight = !facinRight;
+
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+
+        transform.localScale = scale;
     }
 }
