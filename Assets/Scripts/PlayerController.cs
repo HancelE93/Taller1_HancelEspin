@@ -1,30 +1,58 @@
+
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class playercontroller : MonoBehaviour
 {
     private Rigidbody2D rd;
     private Animator animator;
+    private PlayerHealth playerHealth;
 
     public float moveSpeed = 5f;
     public float jumpForce = 7f;
 
-    private bool isGrounded;
     private bool facinRight = true;
+    private bool isGrounded;
 
-    private float move;
+    private bool isKnockedBack = false;
+    private float knockbackTimer = 0.25f;
+    private float knockbackDuration = 0.25f;
 
     void Start()
     {
         rd = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        playerHealth = GetComponent<PlayerHealth>();
     }
 
     void Update()
     {
-        // Leer movimiento del teclado
-        move = Input.GetAxis("Horizontal");
+        // Mientras ocurre el empujón, no aceptar controles
+        if (isKnockedBack)
+        {
+            knockbackTimer -= Time.deltaTime;
 
-        // Girar personaje
+            if (knockbackTimer <= 0f)
+            {
+                isKnockedBack = false;
+            }
+            else
+            {
+                animator.SetFloat("speed", 0f);
+                return;
+            }
+        }
+
+        float move = Input.GetAxis("Horizontal");
+
+        float speedAnimation = Mathf.Abs(move);
+        animator.SetFloat("speed", speedAnimation);
+
+        rd.velocity = new Vector2(
+            move * moveSpeed,
+            rd.velocity.y
+        );
+
+        // Girar al personaje
         if (move > 0 && !facinRight)
         {
             Flip();
@@ -34,28 +62,25 @@ public class PlayerController : MonoBehaviour
             Flip();
         }
 
-        // Animación de correr
-        float speedAnimation = Mathf.Abs(move);
-        animator.SetFloat("speed", speedAnimation);
-
         // Saltar
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            rd.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            rd.velocity = new Vector2(rd.velocity.x, 0f);
+
+            rd.AddForce(
+                Vector2.up * jumpForce,
+                ForceMode2D.Impulse
+            );
 
             isGrounded = false;
-
             animator.SetBool("isJump", true);
         }
     }
 
-    void FixedUpdate()
+    public void StartKnockback()
     {
-        // Aplicar movimiento físico
-        rd.linearVelocity = new Vector2(
-            move * moveSpeed,
-            rd.linearVelocity.y
-        );
+        isKnockedBack = true;
+        knockbackTimer = knockbackDuration;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -63,8 +88,15 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
-
             animator.SetBool("isJump", false);
+        }
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(collision.gameObject);
+            }
         }
     }
 
