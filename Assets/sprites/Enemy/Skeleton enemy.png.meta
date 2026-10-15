@@ -262,10 +262,10 @@ TextureImporter:
       name: Skeleton enemy_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 256
-        width: 64
-        height: 64
+        x: 8
+        y: 272
+        width: 34
+        height: 32
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,10 +284,10 @@ TextureImporter:
       name: Skeleton enemy_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 256
-        width: 64
-        height: 64
+        x: 69
+        y: 272
+        width: 37
+        height: 32
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -306,10 +306,10 @@ TextureImporter:
       name: Skeleton enemy_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 256
-        width: 64
-        height: 64
+        x: 129
+        y: 272
+        width: 41
+        height: 32
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,10 +328,10 @@ TextureImporter:
       name: Skeleton enemy_3
       rect:
         serializedVersion: 2
-        x: 192
-        y: 256
-        width: 64
-        height: 64
+        x: 196
+        y: 272
+        width: 38
+        height: 32
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -350,10 +350,10 @@ TextureImporter:
       name: Skeleton enemy_4
       rect:
         serializedVersion: 2
-        x: 256
-        y: 256
-        width: 64
-        height: 64
+        x: 269
+        y: 272
+        width: 51
+        height: 40
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -372,10 +372,10 @@ TextureImporter:
       name: Skeleton enemy_5
       rect:
         serializedVersion: 2
-        x: 320
-        y: 256
-        width: 64
-        height: 64
+        x: 335
+        y: 272
+        width: 31
+        height: 39
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -394,10 +394,10 @@ TextureImporter:
       name: Skeleton enemy_6
       rect:
         serializedVersion: 2
-        x: 384
-        y: 256
-        width: 64
-        height: 64
+        x: 401
+        y: 272
+        width: 26
+        height: 33
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -416,10 +416,10 @@ TextureImporter:
       name: Skeleton enemy_7
       rect:
         serializedVersion: 2
-        x: 448
-        y: 256
-        width: 64
-        height: 64
+        x: 466
+        y: 272
+        width: 25
+        height: 33
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -438,10 +438,10 @@ TextureImporter:
       name: Skeleton enemy_8
       rect:
         serializedVersion: 2
-        x: 512
-        y: 256
-        width: 64
-        height: 64
+        x: 514
+        y: 272
+        width: 62
+        height: 32
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -460,10 +460,10 @@ TextureImporter:
       name: Skeleton enemy_9
       rect:
         serializedVersion: 2
-        x: 576
-        y: 256
-        width: 64
-        height: 64
+        x: 579
+        y: 272
+        width: 39
+        height: 33
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -482,10 +482,10 @@ TextureImporter:
       name: Skeleton enemy_10
       rect:
         serializedVersion: 2
-        x: 640
-        y: 256
-        width: 64
-        height: 64
+        x: 646
+        y: 272
+        width: 36
+        height: 36
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -504,10 +504,10 @@ TextureImporter:
       name: Skeleton enemy_11
       rect:
         serializedVersion: 2
-        x: 704
-        y: 256
-        width: 64
-        height: 64
+        x: 706
+        y: 272
+        width: 40
+        height: 32
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -526,10 +526,10 @@ TextureImporter:
       name: Skeleton enemy_12
       rect:
         serializedVersion: 2
-        x: 768
-        y: 256
-        width: 64
-        height: 64
+        x: 776
+        y: 272
+        width: 34
+        height: 32
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -548,10 +548,10 @@ TextureImporter:
       name: Skeleton enemy_13
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
-        width: 64
-        height: 64
+        x: 9
+        y: 207
+        width: 32
+        height: 34
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -570,10 +570,10 @@ TextureImporter:
       name: Skeleton enemy_14
       rect:
         serializedVersion: 2
-        x: 64
-        y: 192
-        width: 64
-        height: 64
+        x: 73
+        y: 207
+        width: 32
+        height: 33
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -592,10 +592,10 @@ TextureImporter:
       name: Skeleton enemy_15
       rect:
         serializedVersion: 2
-        x: 128
-        y: 192
-        width: 64
-        height: 64
+        x: 137
+        y: 207
+        width: 31
+        height: 32
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -614,10 +614,10 @@ TextureImporter:
       name: Skeleton enemy_16
       rect:
         serializedVersion: 2
-        x: 192
-        y: 192
-        width: 64
-        height: 64
+        x: 201
+        y: 207
+        width: 35
+        height: 29
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -636,10 +636,10 @@ TextureImporter:
       name: Skeleton enemy_17
       rect:
         serializedVersion: 2
-        x: 256
-        y: 192
-        width: 64
-        height: 64
+        x: 277
+        y: 208
+        width: 25
+        height: 29
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -658,10 +658,10 @@ TextureImporter:
       name: Skeleton enemy_18
       rect:
         serializedVersion: 2
-        x: 320
-        y: 192
-        width: 64
-        height: 64
+        x: 329
+        y: 207
+        width: 38
+        height: 31
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -680,10 +680,10 @@ TextureImporter:
       name: Skeleton enemy_19
       rect:
         serializedVersion: 2
-        x: 384
-        y: 192
-        width: 64
-        height: 64
+        x: 361
+        y: 231
+        width: 4
+        height: 4
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -702,10 +702,10 @@ TextureImporter:
       name: Skeleton enemy_20
       rect:
         serializedVersion: 2
-        x: 448
-        y: 192
-        width: 64
-        height: 64
+        x: 415
+        y: 225
+        width: 13
+        height: 15
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -724,10 +724,10 @@ TextureImporter:
       name: Skeleton enemy_21
       rect:
         serializedVersion: 2
-        x: 512
-        y: 192
-        width: 64
-        height: 64
+        x: 479
+        y: 228
+        width: 12
+        height: 13
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -746,10 +746,10 @@ TextureImporter:
       name: Skeleton enemy_22
       rect:
         serializedVersion: 2
-        x: 576
-        y: 192
-        width: 64
-        height: 64
+        x: 521
+        y: 207
+        width: 42
+        height: 34
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -768,10 +768,10 @@ TextureImporter:
       name: Skeleton enemy_23
       rect:
         serializedVersion: 2
-        x: 640
-        y: 192
-        width: 64
-        height: 64
+        x: 585
+        y: 207
+        width: 42
+        height: 34
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -790,10 +790,10 @@ TextureImporter:
       name: Skeleton enemy_24
       rect:
         serializedVersion: 2
-        x: 704
-        y: 192
-        width: 64
-        height: 64
+        x: 649
+        y: 207
+        width: 42
+        height: 33
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -812,10 +812,10 @@ TextureImporter:
       name: Skeleton enemy_25
       rect:
         serializedVersion: 2
-        x: 768
-        y: 192
-        width: 64
-        height: 64
+        x: 713
+        y: 207
+        width: 42
+        height: 31
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -834,10 +834,10 @@ TextureImporter:
       name: Skeleton enemy_26
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
-        width: 64
-        height: 64
+        x: 265
+        y: 207
+        width: 18
+        height: 7
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -856,10 +856,10 @@ TextureImporter:
       name: Skeleton enemy_27
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
-        width: 64
-        height: 64
+        x: 393
+        y: 207
+        width: 42
+        height: 7
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -878,10 +878,10 @@ TextureImporter:
       name: Skeleton enemy_28
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
-        width: 64
-        height: 64
+        x: 457
+        y: 207
+        width: 42
+        height: 8
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -900,10 +900,10 @@ TextureImporter:
       name: Skeleton enemy_29
       rect:
         serializedVersion: 2
-        x: 192
-        y: 128
-        width: 64
-        height: 64
+        x: 777
+        y: 207
+        width: 42
+        height: 8
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -922,10 +922,10 @@ TextureImporter:
       name: Skeleton enemy_30
       rect:
         serializedVersion: 2
-        x: 256
-        y: 128
-        width: 64
-        height: 64
+        x: 5
+        y: 143
+        width: 36
+        height: 32
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -944,10 +944,10 @@ TextureImporter:
       name: Skeleton enemy_31
       rect:
         serializedVersion: 2
-        x: 320
-        y: 128
-        width: 64
-        height: 64
+        x: 70
+        y: 143
+        width: 35
+        height: 33
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -966,10 +966,10 @@ TextureImporter:
       name: Skeleton enemy_32
       rect:
         serializedVersion: 2
-        x: 384
-        y: 128
-        width: 64
-        height: 64
+        x: 134
+        y: 143
+        width: 35
+        height: 33
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -988,10 +988,10 @@ TextureImporter:
       name: Skeleton enemy_33
       rect:
         serializedVersion: 2
-        x: 448
-        y: 128
-        width: 64
-        height: 64
+        x: 198
+        y: 143
+        width: 35
+        height: 33
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1010,10 +1010,10 @@ TextureImporter:
       name: Skeleton enemy_34
       rect:
         serializedVersion: 2
-        x: 512
-        y: 128
-        width: 64
-        height: 64
+        x: 261
+        y: 143
+        width: 36
+        height: 32
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1032,10 +1032,10 @@ TextureImporter:
       name: Skeleton enemy_35
       rect:
         serializedVersion: 2
-        x: 576
-        y: 128
-        width: 64
-        height: 64
+        x: 325
+        y: 143
+        width: 36
+        height: 31
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1054,10 +1054,10 @@ TextureImporter:
       name: Skeleton enemy_36
       rect:
         serializedVersion: 2
-        x: 640
-        y: 128
-        width: 64
-        height: 64
+        x: 389
+        y: 143
+        width: 36
+        height: 32
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1076,10 +1076,10 @@ TextureImporter:
       name: Skeleton enemy_37
       rect:
         serializedVersion: 2
-        x: 704
-        y: 128
-        width: 64
-        height: 64
+        x: 452
+        y: 143
+        width: 38
+        height: 33
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1098,10 +1098,10 @@ TextureImporter:
       name: Skeleton enemy_38
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 64
+        x: 516
+        y: 143
+        width: 38
+        height: 33
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1120,10 +1120,10 @@ TextureImporter:
       name: Skeleton enemy_39
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
+        x: 580
+        y: 143
+        width: 38
+        height: 33
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1142,10 +1142,10 @@ TextureImporter:
       name: Skeleton enemy_40
       rect:
         serializedVersion: 2
-        x: 128
-        y: 64
-        width: 64
-        height: 64
+        x: 645
+        y: 143
+        width: 37
+        height: 32
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1164,10 +1164,10 @@ TextureImporter:
       name: Skeleton enemy_41
       rect:
         serializedVersion: 2
-        x: 192
-        y: 64
-        width: 64
-        height: 64
+        x: 709
+        y: 143
+        width: 37
+        height: 31
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1186,10 +1186,10 @@ TextureImporter:
       name: Skeleton enemy_42
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
+        x: 9
+        y: 79
+        width: 33
+        height: 33
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1208,10 +1208,10 @@ TextureImporter:
       name: Skeleton enemy_43
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
+        x: 73
+        y: 79
+        width: 34
+        height: 32
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1230,10 +1230,10 @@ TextureImporter:
       name: Skeleton enemy_44
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
+        x: 137
+        y: 79
+        width: 35
+        height: 32
       alignment: 9
       pivot: {x: 0.4884469, y: 0.4912682}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1244,6 +1244,94 @@ TextureImporter:
       bones: []
       spriteID: 6f49543d389dd0c50800000000000000
       internalID: 6633196986395104502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton enemy_45
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 79
+        width: 34
+        height: 33
+      alignment: 9
+      pivot: {x: 0.4884469, y: 0.4912682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b8600fea3ad0674699d699ad2896c4f
+      internalID: 86961896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton enemy_46
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 15
+        width: 32
+        height: 34
+      alignment: 9
+      pivot: {x: 0.4884469, y: 0.4912682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b746db475f99ff46908a6c32c698806
+      internalID: -1251435218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton enemy_47
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 15
+        width: 32
+        height: 33
+      alignment: 9
+      pivot: {x: 0.4884469, y: 0.4912682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dcebe4efa546324380c86e97ce21f7a
+      internalID: 176704434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton enemy_48
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 15
+        width: 32
+        height: 33
+      alignment: 9
+      pivot: {x: 0.4884469, y: 0.4912682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181d0075f97cdca419ea0aec0e52c98d
+      internalID: -213046561
       vertices: []
       indices: 
       edges: []
@@ -1262,7 +1350,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.4884468913078308,"y":0.49126818776130676},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.4884468913078308,"y":0.49126818776130676},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Skeleton enemy_0: 7025154549869057301
       Skeleton enemy_1: -1052431571235582798
@@ -1304,6 +1392,10 @@ TextureImporter:
       Skeleton enemy_42: 1058141771445020729
       Skeleton enemy_43: -4619378450006378782
       Skeleton enemy_44: 6633196986395104502
+      Skeleton enemy_45: 86961896
+      Skeleton enemy_46: -1251435218
+      Skeleton enemy_47: 176704434
+      Skeleton enemy_48: -213046561
       Skeleton enemy_5: -6608955959846293068
       Skeleton enemy_6: 2682571728898774543
       Skeleton enemy_7: 3980739256242589887

@@ -9,13 +9,15 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 3;
     private int currentHealth;
 
-    // Permite que HealthUi consulte las vidas
-    // sin modificar su valor directamente
     public int CurrentHealth => currentHealth;
 
     [Header("Daño e invulnerabilidad")]
     public float invulnerabilityTime = 1f;
     public float knockbackForce = 8f;
+
+    [Header("Sonido de daño")]
+    public AudioSource audioSource;
+    public AudioClip hurtSound;
 
     private bool isInvulnerable = false;
 
@@ -30,6 +32,12 @@ public class PlayerHealth : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         controller = GetComponent<playercontroller>();
+
+        // Usar el Audio Source existente del jugador
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
     }
 
     public void TakeDamage(GameObject enemy)
@@ -39,6 +47,12 @@ public class PlayerHealth : MonoBehaviour
             return;
 
         currentHealth--;
+
+        // Sonido al recibir daño
+        if (audioSource != null && hurtSound != null)
+        {
+            audioSource.PlayOneShot(hurtSound);
+        }
 
         // Activar animación de daño
         if (animator != null)
