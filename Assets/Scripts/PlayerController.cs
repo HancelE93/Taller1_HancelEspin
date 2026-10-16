@@ -47,9 +47,9 @@ public class playercontroller : MonoBehaviour
         float speedAnimation = Mathf.Abs(move);
         animator.SetFloat("speed", speedAnimation);
 
-        rd.velocity = new Vector2(
+        rd.linearVelocity = new Vector2(
             move * moveSpeed,
-            rd.velocity.y
+            rd.linearVelocity.y
         );
 
         // Girar al personaje
@@ -65,7 +65,7 @@ public class playercontroller : MonoBehaviour
         // Saltar
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            rd.velocity = new Vector2(rd.velocity.x, 0f);
+            rd.linearVelocity = new Vector2(rd.linearVelocity.x, 0f);
 
             rd.AddForce(
                 Vector2.up * jumpForce,

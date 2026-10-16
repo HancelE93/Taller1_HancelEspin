@@ -67,7 +67,7 @@ public class PlayerHealth : MonoBehaviour
                 transform.position.x >= enemy.transform.position.x
                 ? 1f : -1f;
 
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
 
             rb.AddForce(
                 new Vector2(direction, 0.5f) * knockbackForce,
