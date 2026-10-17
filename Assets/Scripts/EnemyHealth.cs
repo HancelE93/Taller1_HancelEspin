@@ -12,12 +12,9 @@ public class EnemyHealth : MonoBehaviour
     public Animator animator;
     public float deathAnimationDuration = 1.5f;
 
-    [Header("Sonido de muerte")]
-    public AudioSource audioSource;
-    public AudioClip deathSound;
-
-    [Header("Sonido al recibir un golpe")]
-    public AudioClip hitSound;
+    [Header("Tipo de enemigo")]
+    [Range(1, 2)]
+    public int tipoEnemigo = 1;
 
     private bool isDead = false;
 
@@ -28,11 +25,6 @@ public class EnemyHealth : MonoBehaviour
         if (animator == null)
         {
             animator = GetComponent<Animator>();
-        }
-
-        if (audioSource == null)
-        {
-            audioSource = GetComponent<AudioSource>();
         }
     }
 
@@ -45,12 +37,12 @@ public class EnemyHealth : MonoBehaviour
 
         Debug.Log("Vida del enemigo: " + currentHealth);
 
-        // Sonido de impacto solo si sobrevive al golpe.
-        if (currentHealth > 0 &&
-            audioSource != null &&
-            hitSound != null)
+        // Sonido de impacto si el enemigo sobrevive
+        if (currentHealth > 0 && AudioManager.Instance != null)
         {
-            audioSource.PlayOneShot(hitSound);
+            AudioManager.Instance.ReproducirSfx(
+                AudioManager.Instance.sonidoGolpe
+            );
         }
 
         if (currentHealth <= 0)
@@ -65,6 +57,7 @@ public class EnemyHealth : MonoBehaviour
 
         isDead = true;
 
+        // Detener el movimiento del enemigo
         EnemyPatrol patrol = GetComponent<EnemyPatrol>();
 
         if (patrol != null)
@@ -72,6 +65,7 @@ public class EnemyHealth : MonoBehaviour
             patrol.enabled = false;
         }
 
+        // Detener la física
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
 
         if (rb != null)
@@ -81,6 +75,7 @@ public class EnemyHealth : MonoBehaviour
             rb.bodyType = RigidbodyType2D.Kinematic;
         }
 
+        // Desactivar las colisiones
         Collider2D[] colliders =
             GetComponentsInChildren<Collider2D>();
 
@@ -89,6 +84,24 @@ public class EnemyHealth : MonoBehaviour
             col.enabled = false;
         }
 
+        // Reproducir el sonido según el tipo de enemigo
+        if (AudioManager.Instance != null)
+        {
+            if (tipoEnemigo == 1)
+            {
+                AudioManager.Instance.ReproducirSfx(
+                    AudioManager.Instance.sonidoMuerteEnemigo1
+                );
+            }
+            else if (tipoEnemigo == 2)
+            {
+                AudioManager.Instance.ReproducirSfx(
+                    AudioManager.Instance.sonidoMuerteEnemigo2
+                );
+            }
+        }
+
+        // Reproducir la animación de muerte
         if (animator != null)
         {
             animator.SetTrigger("Death");
@@ -97,13 +110,10 @@ public class EnemyHealth : MonoBehaviour
         StartCoroutine(DestroyAfterDeath());
     }
 
-    // Lo llama el Animation Event del clip DeadEnemy.
+    // Se conserva para evitar perder el Animation Event existente.
+    // El sonido ya se reproduce en Die(), así que no se repite aquí.
     public void PlayDeathSound()
     {
-        if (audioSource != null && deathSound != null)
-        {
-            audioSource.PlayOneShot(deathSound);
-        }
     }
 
     IEnumerator DestroyAfterDeath()

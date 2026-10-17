@@ -17,6 +17,9 @@ public class playercontroller : MonoBehaviour
     private float knockbackTimer = 0.25f;
     private float knockbackDuration = 0.25f;
 
+    [Header("Efectos visuales")]
+    public GameObject polvoSaltoPrefabs;
+
     void Start()
     {
         rd = GetComponent<Rigidbody2D>();
@@ -26,7 +29,6 @@ public class playercontroller : MonoBehaviour
 
     void Update()
     {
-        // Mientras ocurre el empujón, no aceptar controles
         if (isKnockedBack)
         {
             knockbackTimer -= Time.deltaTime;
@@ -43,29 +45,24 @@ public class playercontroller : MonoBehaviour
         }
 
         float move = Input.GetAxis("Horizontal");
-
-        float speedAnimation = Mathf.Abs(move);
-        animator.SetFloat("speed", speedAnimation);
+        animator.SetFloat("speed", Mathf.Abs(move));
 
         rd.linearVelocity = new Vector2(
             move * moveSpeed,
             rd.linearVelocity.y
         );
 
-        // Girar al personaje
         if (move > 0 && !facinRight)
-        {
             Flip();
-        }
         else if (move < 0 && facinRight)
-        {
             Flip();
-        }
 
-        // Saltar
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            rd.linearVelocity = new Vector2(rd.linearVelocity.x, 0f);
+            rd.linearVelocity = new Vector2(
+                rd.linearVelocity.x,
+                0f
+            );
 
             rd.AddForce(
                 Vector2.up * jumpForce,
@@ -74,6 +71,24 @@ public class playercontroller : MonoBehaviour
 
             isGrounded = false;
             animator.SetBool("isJump", true);
+
+            // Sonido de salto desde AudioManager
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.ReproducirSfx(
+                    AudioManager.Instance.sonidoSalto
+                );
+            }
+
+            // Efecto visual de polvo
+            if (polvoSaltoPrefabs != null)
+            {
+                Instantiate(
+                    polvoSaltoPrefabs,
+                    transform.position,
+                    Quaternion.identity
+                );
+            }
         }
     }
 
@@ -114,7 +129,6 @@ public class playercontroller : MonoBehaviour
 
         Vector3 scale = transform.localScale;
         scale.x *= -1;
-
         transform.localScale = scale;
     }
 }

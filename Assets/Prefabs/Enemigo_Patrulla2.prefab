@@ -229,9 +229,7 @@ MonoBehaviour:
   currentHealth: 0
   animator: {fileID: 0}
   deathAnimationDuration: 1
-  audioSource: {fileID: 594339676968500776}
-  deathSound: {fileID: 8300000, guid: ef7c2b6b20a79b04099aa242d130a906, type: 3}
-  hitSound: {fileID: 8300000, guid: e348d85ae9d34c34fb37801e4a7dac46, type: 3}
+  tipoEnemigo: 2
 --- !u!82 &594339676968500776
 AudioSource:
   m_ObjectHideFlags: 0

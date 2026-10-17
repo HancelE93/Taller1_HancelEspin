@@ -15,10 +15,6 @@ public class PlayerHealth : MonoBehaviour
     public float invulnerabilityTime = 1f;
     public float knockbackForce = 8f;
 
-    [Header("Sonido de daño")]
-    public AudioSource audioSource;
-    public AudioClip hurtSound;
-
     private bool isInvulnerable = false;
 
     private Rigidbody2D rb;
@@ -32,35 +28,33 @@ public class PlayerHealth : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         controller = GetComponent<playercontroller>();
-
-        // Usar el Audio Source existente del jugador
-        if (audioSource == null)
-        {
-            audioSource = GetComponent<AudioSource>();
-        }
     }
 
     public void TakeDamage(GameObject enemy)
     {
-        // Evitar recibir varios golpes seguidos
         if (isInvulnerable || currentHealth <= 0)
             return;
 
         currentHealth--;
 
-        // Sonido al recibir daño
-        if (audioSource != null && hurtSound != null)
+        if (CameraShake.Instance != null)
         {
-            audioSource.PlayOneShot(hurtSound);
+            CameraShake.Instance.Sacudir(0.2f, 0.2f);
         }
 
-        // Activar animación de daño
+        // Sonido de daño desde AudioManager
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.ReproducirSfx(
+                AudioManager.Instance.sonidoDanioJugador
+            );
+        }
+
         if (animator != null)
         {
             animator.SetTrigger("Hurt");
         }
 
-        // Aplicar empujón alejándose del enemigo
         if (rb != null && enemy != null)
         {
             float direction =
@@ -75,13 +69,11 @@ public class PlayerHealth : MonoBehaviour
             );
         }
 
-        // Bloquear movimiento durante el empujón
         if (controller != null)
         {
             controller.StartKnockback();
         }
 
-        // Si pierde todas las vidas, reiniciar el nivel
         if (currentHealth <= 0)
         {
             SceneManager.LoadScene(
@@ -91,7 +83,6 @@ public class PlayerHealth : MonoBehaviour
             return;
         }
 
-        // Activar un segundo de invulnerabilidad
         StartCoroutine(InvulnerabilityCoroutine());
     }
 
