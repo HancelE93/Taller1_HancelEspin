@@ -74,11 +74,17 @@ public class PlayerAttack : MonoBehaviour
                 enemyLayer
             );
 
+        // Evita golpear varias veces al mismo enemigo
         HashSet<EnemyHealth> enemiesHit =
             new HashSet<EnemyHealth>();
 
+        // Evita aplicar daño repetido al mismo Boss
+        HashSet<BossController> bossesHit =
+            new HashSet<BossController>();
+
         foreach (Collider2D enemy in hitEnemies)
         {
+            // Daño a enemigos normales
             EnemyHealth enemyHealth =
                 enemy.GetComponentInParent<EnemyHealth>();
 
@@ -89,7 +95,22 @@ public class PlayerAttack : MonoBehaviour
 
                 Debug.Log(
                     "Ataque " + attackNumber +
-                    " | Daño: " + damage
+                    " | Daño al enemigo: " + damage
+                );
+            }
+
+            // Daño al Boss
+            BossController boss =
+                enemy.GetComponentInParent<BossController>();
+
+            if (boss != null &&
+                bossesHit.Add(boss))
+            {
+                boss.TakeDamage(damage);
+
+                Debug.Log(
+                    "Ataque " + attackNumber +
+                    " | Daño al Boss: " + damage
                 );
             }
         }
@@ -101,6 +122,7 @@ public class PlayerAttack : MonoBehaviour
             return;
 
         Gizmos.color = Color.red;
+
         Gizmos.DrawWireSphere(
             attackPoint.position,
             attackRange
